@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif ;
+}
+*::selection{
+    background-color: rgb(177, 150, 202);
+    color: #fff;
+}
+body{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+:root{
+    --bigfnt: 4rem;
+    --h2fnt: 3rem;
+    --pfnt: 1.1rem;
+
+}
+.primeiro{   
+    width: 100%;
+    height: 100vh;
+    background: url(../estilos/cidade.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.primeiro .texto h1{
+    color: #fff;
+    font-size: var(--bigfnt);
+    margin-left: 10%;
+    padding-top: 10%;
+}
+.primeiro .texto p{
+    color: #e9b5e9;
+    font-size: var(--pfnt);
+    margin-left: 11%;
+    padding-top: 1.6%;
+}
+.primeiro .texto h1::after{
+    content: "";
+    display: block;
+    background-color: #cc1bcc;
+    width: 14vw;
+    height: 1vh;
+    margin-top: 2%;
+}
+.segundo{
+    margin-left: 17%;
+    margin-right: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12%;
+}
+.segundo .texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6%;
+    gap: 4vh;
+}
+.segundo .texto h2{
+    font-size: var(--h2fnt);
+    letter-spacing: 3px;
+}
+.segundo .texto h2::after{
+    content: "";
+    display: block;
+    height: 0.4vh;
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 30%;
+    background-color: rgb(255, 166, 0);
+}
+.segundo .texto p{
+    text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  background-color: cadetblue;
+  border-radius: 30px;
+  padding: 3% 5%;
+  width: 90vw;
+}
+
+.container .blocos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6%;
+}
+
+.container .blocos .bloco1,
+.container .blocos .bloco2,
+.container .blocos .bloco3 {
+  background-color: #fff;
+  padding: 2%;
+  transition: transform .4s;
+  height: 50%;
+  border-radius: 4px;
+}
+
+.container .blocos .bloco1:hover,
+.container .blocos .bloco2:hover,
+.container .blocos .bloco3:hover {
+  transform: scale(1.1);
+  cursor: default;
+}
+
+.blocos p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  font-size: var(--pfnt);
+}
+
+
+
+.terc{
+    height: 100vh;
+    margin: 10%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30%;
+
+}
+.terc .texto{
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+.terc .texto h2{
+    font-size: var(--h2fnt);
+}
+
+.terc .texto h2::after{
+    content: "";
+    display: block;
+    height: 0.4vh;
+    width: 30%;
+    margin-top: 1%;
+    background-color: rgb(255, 166, 0);
+}
+
+
+.terc .texto p{
+    font-size: var(--pfnt);
+}
+.terc .btn button{
+    border: none;
+    outline: none;
+    margin-top: 4%;
+    font-size: 3vh;
+    border-radius: 14px;
+    padding: 4%;
+    font-weight: 600;
+    box-shadow: -2px 3px 0 #3d3b3b, -4px 6px 0 black;
+    transition: .4s ;
+}
+.terc .btn button:active{
+    box-shadow: inset -4px 4px 0 rgb(65, 63, 63);
+    font-size: 1.2rem;
+}
+.terc .btn button:hover{
+    transform: translate(10%, 0);
+    background: rgb(236, 173, 236);
+}
+
+.terc img{
+    max-height: 80vh;
+    max-width: 60vw;
+}
+.quart{
+    position: relative;
+    max-width: 100vw;
+    height: 100vh;
+    margin-top: 30%;
+    
+}
+
+.quart .texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quart .texto h1{
+    z-index: 1000;
+    font-size: var(--bigfnt);
+    overflow: hidden;
+}
+.quart .texto h1::after{
+    content: "";
+    display: block;
+    height: 0.4vh;
+    width: 10%;
+    background-color: rgb(255, 166, 0);
+    transition: 0.4s ;
+}
+.quart .texto h1:hover::after{
+    background-color: rebeccapurple;
+    width: 100%;
+   
+}
+
+@media (max-width:768px){
+    .container{
+        height: 110%;
+        width: 50vw;
+        padding: 6%;
+    }
+    .container .blocos{
+        flex-direction: column;
+        gap: 6vh;
+    }
+    .terc{
+        flex-direction: column;
+        gap: 10%;
+    }
+    .terc img{
+        margin-left: 15%;
+    }
+}
+@media (max-width: 470px){
+    :root{
+        --bigfnt: 2rem;
+        --h2fnt: 2rem;
+        --pfnt: 0.6rem;
+    }
+    .primeiro{
+        max-height: 50vh;
+    }
+    .primeiro .texto{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .container{
+        height: 100%;
+        width: 50vw;
+        padding: 14% 8%;
+    }
+    .container .blocos .bloco1,
+    .container .blocos .bloco2,
+    .container .blocos .bloco3{
+        height: 12%;
+    }
+}
